@@ -1,0 +1,311 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+
+    height:100%;
+
+    background:#050505;
+
+    color:#f4c542;
+
+    font-family:
+        "SF Mono",
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+}
+
+body{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.board{
+
+    width:100%;
+
+    max-width:850px;
+
+    border:2px solid #303030;
+
+    padding:40px;
+
+    background:#0b0b0b;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,.45);
+
+}
+
+.airport{
+
+    font-size:68px;
+
+    font-weight:bold;
+
+    letter-spacing:8px;
+
+    margin-bottom:25px;
+
+}
+
+.line{
+
+    height:1px;
+
+    background:#333;
+
+    margin:22px 0;
+
+}
+
+.row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:16px 0;
+
+    font-size:22px;
+
+}
+
+.row span:first-child{
+
+    color:#8d8d8d;
+
+}
+
+.announcement{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+.small{
+
+    color:#888;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+}
+
+.date{
+
+    margin-top:15px;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+.time{
+
+    margin-top:8px;
+
+    color:#d0d0d0;
+
+}
+
+.countdown{
+
+    margin-top:45px;
+
+    text-align:center;
+
+    font-size:34px;
+
+    letter-spacing:2px;
+
+}
+
+.routes{
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+.routes-title{
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+#route-fr,
+#route-ch,
+#route-de{
+
+    font-size:24px;
+
+    margin:12px 0;
+
+    transition:.5s;
+
+}
+
+#route-fr{
+
+    color:#f4c542;
+
+}
+
+#route-ch,
+#route-de{
+
+    color:#777;
+
+}
+
+#final{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    justify-content:center;
+
+    padding:30px;
+
+    min-height:100vh;
+
+    animation:fade 1.2s ease;
+
+}
+
+#final h1{
+
+    font-size:42px;
+
+}
+
+#final h2{
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    font-weight:normal;
+
+}
+
+#itinerary{
+
+    display:block;
+
+    margin:30px auto 0;
+
+    max-width:min(90vw,700px);
+
+    max-height:70vh;
+
+    width:auto;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:10px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+    display:flex;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .airport{
+
+        font-size:46px;
+        letter-spacing:12px;
+        text-shadow:0 0 8px rgba(244,197,66,.15);
+
+    }
+
+    .row{
+
+        font-size:18px;
+
+    }
+
+    .date{
+
+        font-size:26px;
+
+    }
+
+    .countdown{
+
+        font-size:24px;
+
+    }
+
+    .board{
+
+        transition:opacity 1.5s ease;
+
+    }
+
+    #final{
+
+        opacity:0;
+
+        transition:opacity 2s ease;
+
+    }
+
+    #final.show{
+
+        opacity:1;
+
+    }
+
+}
