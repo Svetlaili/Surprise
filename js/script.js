@@ -150,6 +150,11 @@ async function start() {
 
     await type("Destination confirmed.");
 
+    // сменяме стрелката с отметка
+    fr.textContent = "✓ France";
+    fr.style.color = "#8fd14f";
+    fr.style.fontWeight = "700";
+
     await sleep(3000);
 
     const board = document.querySelector(".board");
