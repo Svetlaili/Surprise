@@ -11,6 +11,7 @@ const status = document.getElementById("status");
 const destination = document.getElementById("destination");
 const routes = document.getElementById("routes");
 const finalScreen = document.getElementById("final");
+const flightNumber = document.getElementById("flight-number");
 
 let started = false;
 
@@ -73,6 +74,24 @@ async function start() {
 
     await type("Loading passenger itinerary...");
     await sleep(WAIT);
+
+  // Разкриване на номера на полета
+
+  flightNumber.textContent = " ████";
+
+  await sleep(400);
+
+  const flight = "4323";
+
+  flightNumber.textContent = " ";
+
+  for (const digit of flight) {
+
+      flightNumber.textContent += digit;
+
+      await sleep(120);
+
+  }
 
     await type("Checking Schengen entry...");
     await sleep(WAIT);
