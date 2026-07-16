@@ -1,7 +1,7 @@
 const TEST_MODE = false;
 const FAST_MODE = false;
 
-const unlock = new Date("2026-07-16T12:30:00Z");
+const unlock = new Date("2026-07-24T12:30:00Z");
 
 const WAIT = FAST_MODE ? 2500 : 7000;
 const LETTER = FAST_MODE ? 240 : 180;
