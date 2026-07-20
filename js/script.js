@@ -1,5 +1,5 @@
-const TEST_MODE = false;
-const FAST_MODE = false;
+const TEST_MODE = true;
+const FAST_MODE = true;
 
 const unlock = new Date("2026-07-24T12:30:00Z");
 

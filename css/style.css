@@ -308,4 +308,16 @@ body{
 
     }
 
+    @media (max-width:700px){
+
+        #status{
+            display:inline-block;
+            width:58%;
+            text-align:right;
+            white-space:normal;
+            line-height:1.3;
+        }
+
+    }
+
 }
